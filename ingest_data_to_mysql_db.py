@@ -3,6 +3,17 @@ import time
 import mysql.connector
 import json
 import sys
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the credentials
+mysql_host = os.getenv("MYSQL_HOST")
+mysql_user = os.getenv("MYSQL_USER")
+mysql_password = os.getenv("MYSQL_PASSWORD")
+mysql_database = os.getenv("MYSQL_DATABASE")
 
 # Function to insert a single record into MySQL table
 def insert_record_into_mysql(record):
@@ -10,10 +21,10 @@ def insert_record_into_mysql(record):
     
     try:
         connection = mysql.connector.connect(
-            host='127.0.0.1',
-            user='root',
-            password='7892031022',
-            database='kafkaProducer'
+            host=mysql_host,
+            user=mysql_user,
+            password=mysql_password,
+            database=mysql_database
         )
 
         cursor = connection.cursor()
