@@ -27,6 +27,7 @@ Usage:
 * The `avro_data_producer.py` script can be configured with the appropriate Kafka broker details and executed to start publishing data to the Kafka topic.
 
 3. Kafka Consumers
+
 Consumer Group 1
 * Description: This consumer group is responsible for consuming data from the Kafka topic and storing it in a Cassandra database for further analysis and processing.
 
