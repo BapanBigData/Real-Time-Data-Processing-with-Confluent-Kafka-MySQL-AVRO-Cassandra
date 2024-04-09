@@ -15,6 +15,7 @@ mysql_user = os.getenv("MYSQL_USER")
 mysql_password = os.getenv("MYSQL_PASSWORD")
 mysql_database = os.getenv("MYSQL_DATABASE")
 
+
 # Function to insert a single record into MySQL table
 def insert_record_into_mysql(record):
     connection = None
