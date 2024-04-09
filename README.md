@@ -9,20 +9,22 @@ Implementation Details:
 
 * Mock Data Generator Script: A Python script is developed to generate realistic product data, including attributes such as product name, category, price, and last updated timestamp.
 * MySQL Database Interaction: The generated data is stored in a MySQL database, providing a reliable and structured data source for subsequent processing stages.
+
 Usage:
 
-The `ingest_data_to_mysql_db.py` script can be executed with the desired number of records to generate and insert into the MySQL database.
+* The `ingest_data_to_mysql_db.py` script can be executed with the desired number of records to generate and insert into the MySQL database.
 
 2. Kafka Producer
 * Description: This component is responsible for publishing data from the MySQL database to a Kafka topic, enabling real-time data streaming and processing.
 
 Implementation Details:
 
-Kafka Producer Script: A Python script is developed to connect to the MySQL database, fetch data updates, and publish them to a designated Kafka topic.
-Serialization: Avro serialization is utilized to ensure efficient and schema-aware data serialization before publishing to Kafka.
+* Kafka Producer Script: A Python script is developed to connect to the MySQL database, fetch data updates, and publish them to a designated Kafka topic.
+* Serialization: Avro serialization is utilized to ensure efficient and schema-aware data serialization before publishing to Kafka.
+
 Usage:
 
-The `avro_data_producer.py` script can be configured with the appropriate Kafka broker details and executed to start publishing data to the Kafka topic.
+* The `avro_data_producer.py` script can be configured with the appropriate Kafka broker details and executed to start publishing data to the Kafka topic.
 
 3. Kafka Consumers
 Consumer Group 1
